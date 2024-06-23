@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penanganan Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    function clearform() {
+        document.getElementById("nilai").value = "";
+        document.getElementById("nama").value = "";
+        document.getElementById("nim").value = "";
+    }
+</script>
+<body>
+    <div class="container">
+        <h1>PEMERIKSAAN NILAI KELULUSAN</h1>
+        <form method="post" action="sintak.php" onsubmit="return validateForm()">
+            <table width="58%" border="0" align="center">
+                <tr>
+                    <td>Masukkan Nama Lengkap:</td>
+                    <td><input type="text" name="nama" id="nama" required></td>
+                </tr>
+                <tr>
+                    <td>Masukkan NIM Anda:</td>
+                    <td><input type="text" name="nim" id="nim" required></td>
+                </tr>
+                <tr>
+                    <td>Masukkan Nilai Anda:</td>
+                    <td><input type="number" name="nilai" id="nilai" required></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+                        <input type="submit" name="submit" value="Kirim">
+                        <input type="reset" name="reset" value="Batal" onclick="clearform()">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
